@@ -1,0 +1,12 @@
+services:
+  app:
+    container_name: drone_trial
+    build:
+      context: .
+      dockerfile: Dockerfile
+    tty: true
+    stdin_open: true
+    ports:
+      - "8080:8080"
+    volumes:
+      - /home/alicia/dev_ws:/ros2_ws
